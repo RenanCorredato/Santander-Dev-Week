@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -14,20 +15,34 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:layout_width="187dp"
-        android:layout_height="33dp"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_banco_santander_seeklogo_com"
-        app:layout_constraintStart_toStartOf="@id/toolbar"
-        app:layout_constraintTop_toTopOf="@id/toolbar"
-        app:layout_constraintBottom_toBottomOf="@id/toolbar"/>
+
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_banco_santander"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
     </androidx.appcompat.widget.Toolbar>
-
 
     <ImageView
         android:id="@+id/imageView"
@@ -90,7 +105,7 @@
                 android:id="@+id/iv_saldo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_update_black_24dp"
+                android:src="@drawable/ic_update"
                 android:layout_margin="16dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
@@ -111,7 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_expand_less_black_24dp"
+                android:src="@drawable/ic_expand_less"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintRight_toRightOf="parent"/>
 
@@ -183,7 +198,7 @@
                 android:id="@+id/iv_pagar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_credit_card_black_24dp"
+                android:src="@drawable/ic_credit_card"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="@id/tv_pagar"
@@ -221,7 +236,7 @@
                 android:id="@+id/iv_transferir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_payments_black_24dp"
+                android:src="@drawable/ic_payments"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="@id/tv_transferir"
@@ -259,7 +274,7 @@
                 android:id="@+id/iv_recarregar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_mobile_friendly_black_24dp"
+                android:src="@drawable/ic_mobile_friendly"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="@id/tv_recarregar"
@@ -274,8 +289,7 @@
                 app:layout_constraintTop_toBottomOf="@id/iv_recarregar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                />
+                app:layout_constraintEnd_toEndOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -291,16 +305,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <ImageView
+        android:id="@+id/iv_bandeira_cartao"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_mastercard"
+        app:layout_constraintTop_toTopOf="@id/iv_cartao_final_content"
+        app:layout_constraintStart_toStartOf="@id/iv_cartao_final_content"
+        app:layout_constraintBottom_toBottomOf="@id/iv_cartao_final_content"
+        app:layout_constraintLeft_toLeftOf="@id/iv_cartao_final_content"/>
+
     <TextView
         android:id="@+id/tv_cartao_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_cartao_final"
+        android:layout_margin="16dp"
         android:textColor="@android:color/white"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintStart_toStartOf="@id/iv_cartao_final_content"
-        app:layout_constraintTop_toTopOf="@id/iv_cartao_final_content"
-        app:layout_constraintBottom_toBottomOf="@id/iv_cartao_final_content"/>
+        app:layout_constraintTop_toTopOf="@id/iv_bandeira_cartao"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bandeira_cartao"
+        app:layout_constraintLeft_toRightOf="@id/iv_bandeira_cartao"/>
 
     <TextView
         android:id="@+id/tv_cartao_final_value"
@@ -312,13 +337,16 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/tv_cartao_final"
         app:layout_constraintTop_toTopOf="@id/tv_cartao_final"/>
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_expand_more_black_24dp"
+        android:src="@drawable/ic_expand_more"
         android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="@id/iv_cartao_final_content"
         app:layout_constraintTop_toTopOf="@id/iv_cartao_final_content"
         app:layout_constraintEnd_toEndOf="@id/iv_cartao_final_content"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

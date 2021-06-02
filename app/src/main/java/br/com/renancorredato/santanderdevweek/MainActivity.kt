@@ -22,11 +22,13 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean { // escutando item do menu
         return  when (item.itemId) {
             R.id.item_1 -> {
-                Log.d("CLICK","Click no item 1 ")
                 true
+
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
 
 }
